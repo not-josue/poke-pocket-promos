@@ -4,7 +4,7 @@
 
 - [x] Create needed folders and move files around
 
-- [ ] Deploy on Github
+- [x] Deploy on Github
 
 - [ ] Create Favicon
 
