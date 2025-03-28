@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/poke-pocket-promos/static/css/main.f855e6bc.css",
+    "main.js": "/poke-pocket-promos/static/js/main.a3754a83.js",
+    "static/media/logo.svg": "/poke-pocket-promos/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/poke-pocket-promos/index.html",
+    "main.f855e6bc.css.map": "/poke-pocket-promos/static/css/main.f855e6bc.css.map",
+    "main.a3754a83.js.map": "/poke-pocket-promos/static/js/main.a3754a83.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.a3754a83.js"
+  ]
+}
