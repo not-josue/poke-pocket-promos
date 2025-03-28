@@ -1,9 +1,16 @@
-import logo from './logo.svg';
-import './css/Home.css';
+// Imports
+import logo from "./logo.svg";
+import "./css/Home.css";
 
-export function Home() {
+// Data
+const data = {
+  title: "Poke Pocket Promos",
+};
+
+export default function Home() {
   return (
     <div className="App">
+      <title>{data.title}</title>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

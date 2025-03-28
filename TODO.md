@@ -6,7 +6,7 @@
 
 - [x] Deploy on Github
 
-- [ ] Create Favicon
+- [x] Create Favicon
 
 ## Components
 
