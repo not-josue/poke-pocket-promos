@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'Outfit';
+    src: url(../../../public/fonts/Outfit-VariableFont_wght.woff2) format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../../../public/fonts/Montserrat-VariableFont_wght.woff2) format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../../../public/fonts/Montserrat-Italic-VariableFont_wght.woff2) format('woff2');
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+:root {
+    /* Fonts */
+    --heading-ff: "Outfit", Arial, Helvetica, sans-serif;
+    --text-ff: "Montserrat", Arial, Helvetica, sans-serif;
+
+    /* Breakpoints 
+    small: 640px 
+    */
+
+}
+
+/* Start Reset */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--text-ff);
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-ff);
+    text-wrap: balance;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+p,
+li {
+    text-wrap: pretty;
+}
+
+button {
+    font: inherit;
+    font-weight: bold;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+ul:where([role="list"]),
+ol:where([role="list"]) {
+    list-style: none;
+}
+
+input,
+textarea {
+    font: inherit;
+    padding: 0.3rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* End Reset */

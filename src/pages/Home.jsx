@@ -1,16 +1,13 @@
 // Imports
 import logo from "./logo.svg";
 import "./css/Home.css";
-
-// Data
-const data = {
-  title: "Poke Pocket Promos",
-};
+import { metadata } from "../data/metadata";
 
 export default function Home() {
   return (
     <div className="App">
-      <title>{data.title}</title>
+      <title>{metadata.home.title}</title>
+      <meta name="description" content={metadata.home.description} />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

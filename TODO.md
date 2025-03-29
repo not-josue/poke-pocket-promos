@@ -8,13 +8,17 @@
 
 - [x] Create Favicon
 
+- [x] Transfer Global CSS & Reset
+
 ## Components
 
-- [ ] Create Navigation 
+- [x] Create Navigation 
+
+- [ ] Add State & Effect to Navigation
 
 ## Layout
 
-- [ ] Setup Base Layout for each page
+- [x] Setup Base Layout for each page
 
 ## Pages
 

@@ -23,6 +23,14 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+  <script>
+    // Light / Dark Mode JS
+    if (!("theme") in localStorage) {
+      localStorage.theme = "light";
+    } else if (localStorage.theme === "dark") {
+      document.documentElement.classList.add("dark");
+    }
+  </script>
 </head>
 
 <body>
