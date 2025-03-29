@@ -1,5 +1,6 @@
-// Imports
+// CSS
 import "./css/Home.css";
+// Data
 import { metadata } from "../data/metadata";
 
 export default function Home() {

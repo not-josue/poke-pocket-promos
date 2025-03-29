@@ -12,9 +12,17 @@
 
 ## Components
 
-- [x] Create Navigation - Not fixed dynamically as becomes too complicated
+- [x] Create Navigation
 
 - [ ] Add State & Effect to Navigation
+
+- [x] Create Release card
+
+- [x] Create Form
+
+- [x] Create Footer
+
+- [ ] Create Gallery Card
 
 ## Layout
 
@@ -22,6 +30,16 @@
 
 ## Pages
 
-- [x] Create Homepage
+- [x] Create Home page
 
-- [x] Create Releases
+- [ ] Create Cards page
+
+- [x] Create Contact page
+
+- [x] Create Releases page
+
+- [x] Create Login page
+
+- [ ] Create Account page
+
+- [ ] Dedicated Card pages

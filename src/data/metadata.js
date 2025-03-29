@@ -19,6 +19,11 @@ const metadata = {
     description:
       "Find out about the latest set releases in Pokémon TCG Pocket.",
   },
+  login: {
+    title: TITLE_LAYOUT + "Login",
+    description:
+      "Create a new account or login to your Poké Pocket Promos account.",
+  },
 };
 
 export { metadata };

@@ -8,6 +8,7 @@ import BaseLayout from "./layouts/BaseLayout";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Releases from "./pages/Releases";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="contact" element={<Contact />} />
           <Route path="releases" element={<Releases />} />
+          <Route path="login" element={<Login />} />
         </Route>
       </Routes>
     </BrowserRouter>
