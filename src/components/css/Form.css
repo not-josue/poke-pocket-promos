@@ -1,0 +1,61 @@
+form {
+    padding: 2rem;
+    border: 1px dotted var(--body-font-color);
+    border-radius: var(--form-border-radius);
+    text-align: left;
+    transition: var(--transition);
+    box-shadow: var(--box-shadow);
+}
+
+form>div {
+    display: grid;
+
+    & label {
+        font-size: 1.125rem;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    & input,
+    textarea {
+        border-radius: var(--border-radius);
+        border: 1px solid var(--body-font-color);
+        margin-bottom: 2rem;
+    }
+
+    & button {
+        background-color: var(--blue-600);
+        color: var(--neutral-100);
+        border-radius: var(--border-radius);
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    & button:hover {
+        background-color: var(--blue-800);
+    }
+
+    & a {
+        background-color: var(--red-600);
+        color: var(--neutral-100);
+        border-radius: var(--border-radius);
+        padding: 0.5rem;
+        text-decoration: none;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    & a:hover {
+        background-color: var(--red-800);
+    }
+
+}
+
+@media (min-width: 768px) {
+    main {
+
+        form {
+            padding-inline: 8rem;
+        }
+    }
+}

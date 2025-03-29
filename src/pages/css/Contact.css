@@ -1,0 +1,18 @@
+#root:has(main.contact-page) {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main.contact-page {
+    padding: 2rem 1rem;
+    max-width: 65ch;
+    margin-inline: auto;
+    text-align: center;
+
+    &>*:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+}
