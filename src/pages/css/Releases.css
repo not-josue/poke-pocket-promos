@@ -1,0 +1,17 @@
+main.releases-page {
+    padding-block: 2rem;
+
+    & h1 {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+}
+
+#set-releases {
+    background-color: var(--footer-bg);
+    padding: 2rem 1rem;
+    max-width: 85ch;
+    margin-inline: auto;
+    display: grid;
+    row-gap: 2rem;
+}

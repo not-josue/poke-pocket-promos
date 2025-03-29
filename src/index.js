@@ -1,8 +1,12 @@
+// React
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Home from "./pages/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+// Layout
 import BaseLayout from "./layouts/BaseLayout";
+// Pages
+import Home from "./pages/Home";
+import Releases from "./pages/Releases";
 
 function App() {
   return (
@@ -10,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<BaseLayout />}>
           <Route index element={<Home />} />
+          <Route path="releases" element={<Releases />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import logo from "./logo-optimized.svg";
 import darkLogo from "./logo-dark-optimized.svg";
 
-export default function Navigation() {
+export default function Navigation(isFixed) {
   return (
-    <header>
+    <header className={isFixed ? "fixed" : ""}>
       <nav id="prime-nav">
         {/* Hamburger */}
         <button

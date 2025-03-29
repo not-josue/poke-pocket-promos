@@ -1,0 +1,16 @@
+.release-card {
+    max-width: 65ch;
+    margin-inline: auto;
+    display: grid;
+    row-gap: 2rem;
+
+    & header {
+        text-align: center;
+    }
+
+    & iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+    }
+
+}

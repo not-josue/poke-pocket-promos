@@ -12,7 +12,7 @@
 
 ## Components
 
-- [x] Create Navigation 
+- [x] Create Navigation - Not fixed dynamically as becomes too complicated
 
 - [ ] Add State & Effect to Navigation
 
@@ -22,4 +22,6 @@
 
 ## Pages
 
-- [ ] Create Homepage
+- [x] Create Homepage
+
+- [x] Create Releases
