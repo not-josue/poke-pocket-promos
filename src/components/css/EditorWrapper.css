@@ -1,0 +1,9 @@
+.editor-wrapper {
+    display: flex;
+    column-gap: 0.7rem;
+
+    button svg {
+        vertical-align: text-bottom;
+        fill: var(--body-font-color);
+    }
+}

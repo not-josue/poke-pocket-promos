@@ -28,6 +28,10 @@ const metadata = {
     title: TITLE_LAYOUT + "Reset Password",
     description: "Reset your Poké Pocket Promos password.",
   },
+  account: {
+    title: TITLE_LAYOUT + "Account",
+    description: "View your account for Pokémon Pocket Promos.",
+  },
 };
 
 export { metadata };

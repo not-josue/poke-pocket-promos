@@ -1,0 +1,55 @@
+aside {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    z-index: 10;
+    padding: 0.5rem;
+    background-color: var(--blue-600);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+
+    & button {
+        color: var(--white);
+    }
+
+    #popover {
+        position: absolute;
+        bottom: 2.5rem;
+        right: 0.5rem;
+        background-color: var(--body-bg);
+        box-shadow: var(--box-shadow);
+        margin-block-end: 1rem;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: var(--border-radius);
+        color: var(--body-font-color);
+        display: none;
+
+        & input {
+            border-radius: var(--border-radius);
+            border: 1px solid var(--body-font-color);
+        }
+
+    }
+}
+
+
+aside:has([aria-expanded="true"]) {
+
+    #popover {
+        display: grid;
+        row-gap: 1rem;
+
+    }
+}
+
+@media (min-width: 1024px) {
+
+    aside {
+        bottom: 6rem;
+
+        & h3 {
+            font-size: 1.5rem;
+        }
+    }
+}

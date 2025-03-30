@@ -1,0 +1,46 @@
+#root:has(main.account-page) {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    transition: var(--transition);
+}
+
+main.account-page {
+    padding: 2rem 1rem;
+    max-width: 80rem;
+    margin-inline: auto;
+    text-align: center;
+    flex: auto;
+
+    &>*:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    #gallery-wrapper {
+        display: grid;
+        gap: 2rem;
+    }
+
+}
+
+/* Media Queries */
+
+@media (min-width: 1024px) {
+    main.account-page {
+
+        #gallery-wrapper {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    main.account-page {
+
+        #gallery-wrapper {
+            column-gap: 8rem;
+        }
+    }
+}

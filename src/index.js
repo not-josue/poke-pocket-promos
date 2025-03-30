@@ -10,6 +10,7 @@ import Contact from "./pages/Contact";
 import Releases from "./pages/Releases";
 import Login from "./pages/Login";
 import Reset from "./pages/Reset";
+import Account from "./pages/Account";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="releases" element={<Releases />} />
           <Route path="login" element={<Login />} />
           <Route path="reset" element={<Reset />} />
+          <Route path="account" element={<Account />} />
         </Route>
       </Routes>
     </BrowserRouter>

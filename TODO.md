@@ -20,9 +20,19 @@
 
 - [x] Create Form
 
+- [ ] Add Validation to Forms
+
 - [x] Create Footer
 
 - [ ] Create Gallery Card
+
+- [x] Create Popover
+
+- [x] Create Popover Editor Wrapper
+
+- [ ] Add State & Effect to Popover Button
+
+- [x] Create Mini Gallery
 
 ## Layout
 
@@ -40,7 +50,7 @@
 
 - [x] Create Login page
 
-- [ ] Create Account page
+- [x] Create Account page
 
 - [ ] Dedicated Card pages
 
