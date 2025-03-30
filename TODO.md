@@ -43,3 +43,5 @@
 - [ ] Create Account page
 
 - [ ] Dedicated Card pages
+
+- [x] Create Reset Password page
