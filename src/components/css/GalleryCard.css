@@ -1,0 +1,18 @@
+.gallery-card figcaption {
+    padding-block: 0.8rem;
+    display: flex;
+    justify-content: space-around;
+
+    svg {
+        fill: var(--body-font-color);
+        vertical-align: middle;
+    }
+}
+
+svg path.yellow {
+    fill: var(--yellow-500);
+}
+
+svg path.red {
+    fill: var(--red-600);
+}

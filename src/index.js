@@ -7,6 +7,7 @@ import BaseLayout from "./layouts/BaseLayout";
 // Pages
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
+import Cards from "./pages/Cards";
 import Releases from "./pages/Releases";
 import Login from "./pages/Login";
 import Reset from "./pages/Reset";
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<BaseLayout />}>
           <Route index element={<Home />} />
+          <Route path="cards" element={<Cards />} />
           <Route path="contact" element={<Contact />} />
           <Route path="releases" element={<Releases />} />
           <Route path="login" element={<Login />} />

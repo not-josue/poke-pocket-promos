@@ -24,7 +24,7 @@
 
 - [x] Create Footer
 
-- [ ] Create Gallery Card
+- [x] Create Gallery Card
 
 - [x] Create Popover
 
@@ -42,7 +42,7 @@
 
 - [x] Create Home page
 
-- [ ] Create Cards page
+- [x] Create Cards page
 
 - [x] Create Contact page
 
