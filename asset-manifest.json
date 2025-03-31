@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/poke-pocket-promos/static/css/main.abee3b17.css",
-    "main.js": "/poke-pocket-promos/static/js/main.68709a71.js",
+    "main.js": "/poke-pocket-promos/static/js/main.65bc4c32.js",
     "static/media/Montserrat-Italic-VariableFont_wght.woff2": "/poke-pocket-promos/static/media/Montserrat-Italic-VariableFont_wght.1c3b32e0b89bef744a1d.woff2",
     "static/media/Montserrat-VariableFont_wght.woff2": "/poke-pocket-promos/static/media/Montserrat-VariableFont_wght.fd797ffc82a3b19335bd.woff2",
     "static/media/Outfit-VariableFont_wght.woff2": "/poke-pocket-promos/static/media/Outfit-VariableFont_wght.27503cc220412271497f.woff2",
@@ -9,10 +9,10 @@
     "static/media/logo-dark-optimized.svg": "/poke-pocket-promos/static/media/logo-dark-optimized.b57afe5b4c905a87a5f0e133116eca30.svg",
     "index.html": "/poke-pocket-promos/index.html",
     "main.abee3b17.css.map": "/poke-pocket-promos/static/css/main.abee3b17.css.map",
-    "main.68709a71.js.map": "/poke-pocket-promos/static/js/main.68709a71.js.map"
+    "main.65bc4c32.js.map": "/poke-pocket-promos/static/js/main.65bc4c32.js.map"
   },
   "entrypoints": [
     "static/css/main.abee3b17.css",
-    "static/js/main.68709a71.js"
+    "static/js/main.65bc4c32.js"
   ]
 }
