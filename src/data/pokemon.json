@@ -902,7 +902,7 @@
         "costs": [
           {
             "type": "psychic",
-            "amount": 2
+            "amount": 1
           }
         ],
         "name": "Confuse Ray",

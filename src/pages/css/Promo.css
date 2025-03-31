@@ -1,0 +1,147 @@
+#root:has(main.promo-page) {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main.promo-page {
+    padding: 2rem;
+    max-width: 80rem;
+    margin-inline: auto;
+    display: grid;
+    align-items: start;
+    justify-items: center;
+    row-gap: 2rem;
+
+    &>img {
+        height: 419px;
+        width: 300px;
+    }
+
+}
+
+article {
+    padding-block: 1rem;
+    max-width: 45ch;
+    border: 1px dotted var(--body-font-color);
+    border-radius: var(--form-border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 2rem;
+
+    &>*:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+    &>*:not(hr) {
+        padding-inline: 1rem;
+    }
+
+    & header {
+        display: flex;
+        justify-content: space-between;
+
+        #card-stage {
+            display: inline;
+        }
+
+        & span {
+            display: flex;
+            column-gap: 0.5rem;
+            padding-top: 0.2rem;
+        }
+    }
+
+    .poke-attack,
+    .item-action,
+    .item-description {
+        display: grid;
+        row-gap: 2rem;
+
+        & div>div {
+            display: flex;
+            align-items: center;
+            column-gap: 1rem;
+        }
+
+        .card-image-wrapper {
+            display: flex;
+            column-gap: 0.3rem;
+        }
+
+        .card-attack-name {
+            display: flex;
+        }
+    }
+
+    .weakness {
+        display: flex;
+        justify-content: space-between;
+
+        & div:first-of-type>div {
+            display: flex;
+            justify-content: center;
+            column-gap: 0.5rem;
+            font-weight: bold;
+        }
+
+        #retreat-div {
+            display: grid;
+            justify-items: center;
+
+            & div {
+                display: flex;
+                column-gap: 0.3rem;
+            }
+        }
+    }
+
+
+    .pokedex {
+        display: grid;
+        row-gap: 0.5rem;
+    }
+
+}
+
+article+a {
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: inherit;
+    display: flex;
+    column-gap: 0.5rem;
+    max-width: fit-content;
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    justify-self: center;
+
+    & svg {
+        vertical-align: middle;
+        fill: var(--body-font-color);
+    }
+}
+
+article+a:hover {
+    background-color: var(--nav-links-bg-hover);
+}
+
+@media (min-width: 768px) {
+    main.promo-page {
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    article {
+
+        .poke-attack {
+
+            .card-attack-name {
+                column-gap: 4rem;
+            }
+        }
+    }
+}

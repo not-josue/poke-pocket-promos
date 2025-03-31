@@ -34,6 +34,14 @@
 
 - [x] Create Mini Gallery
 
+- [ ] Create PokemonCard
+
+- [ ] Create TrainerCard
+
+## Data
+
+- [ ] Update JSON and add images for Shining Revelry
+
 ## Layout
 
 - [x] Setup Base Layout for each page
@@ -52,6 +60,6 @@
 
 - [x] Create Account page
 
-- [ ] Dedicated Card pages
+- [x] Dedicated Card pages
 
 - [x] Create Reset Password page

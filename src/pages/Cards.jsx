@@ -24,7 +24,7 @@ export default function Cards() {
             <strong>Sort By:</strong>
           </p>
           {/* <!-- Type Selector --> */}
-          <label class="visually-hidden" htmlFor="card-type">
+          <label className="visually-hidden" htmlFor="card-type">
             Type of Card
           </label>
           <select name="card-type" id="card-type" required>
@@ -35,7 +35,7 @@ export default function Cards() {
             <option value="item">Item</option>
           </select>
           {/* <!-- Order Selector --> */}
-          <label class="visually-hidden" htmlFor="card-order">
+          <label className="visually-hidden" htmlFor="card-order">
             Order Preference
           </label>
           <select name="card-order" id="card-order" required>
@@ -44,7 +44,7 @@ export default function Cards() {
             <option value="descending">Descending</option>
           </select>
           {/* <!-- Set Selector --> */}
-          <label class="visually-hidden" htmlFor="card-set">
+          <label className="visually-hidden" htmlFor="card-set">
             Promo Set
           </label>
           <select name="card-set" id="card-set" required>
@@ -64,7 +64,7 @@ export default function Cards() {
 
         <div id="gallery">
           {allCards.map((el) => (
-            <GalleryCard {...el} />
+            <GalleryCard {...el} key={el.id} />
           ))}
         </div>
       </main>

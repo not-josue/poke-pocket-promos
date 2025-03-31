@@ -12,6 +12,7 @@ import Releases from "./pages/Releases";
 import Login from "./pages/Login";
 import Reset from "./pages/Reset";
 import Account from "./pages/Account";
+import Promo from "./pages/Promo";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="reset" element={<Reset />} />
           <Route path="account" element={<Account />} />
+          <Route path="/:cardId" element={<Promo />} />
         </Route>
       </Routes>
     </BrowserRouter>
