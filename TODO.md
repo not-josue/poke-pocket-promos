@@ -34,9 +34,9 @@
 
 - [x] Create Mini Gallery
 
-- [ ] Create PokemonCard
+- [x] Create PokemonCard
 
-- [ ] Create TrainerCard
+- [x] Create TrainerCard
 
 ## Data
 
