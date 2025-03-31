@@ -517,8 +517,7 @@
           }
         ],
         "name": "Heat Blast",
-        "value": "70",
-        "description": "Flip 3 coins. Take an amount of Fire Energy from your Energy Zone equal to the number of heads and attach it to your Benched Fire Pokémon in any way you like."
+        "value": "70"
       }
     ],
     "weakness": "lightning",
