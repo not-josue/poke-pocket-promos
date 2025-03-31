@@ -1243,5 +1243,311 @@
     "set": "Triumphant Light",
     "artist": "okayamatakatoshi",
     "image": "/images/promos/promo49.webp"
+  },
+  {
+    "id": 50,
+    "type": "Pokemon",
+    "name": "Mewtwo ex",
+    "stats": {
+      "hp": "150",
+      "type": "psychic",
+      "stage": "Basic"
+    },
+    "attacks": [
+      {
+        "costs": [
+          {
+            "type": "psychic",
+            "amount": 1
+          },
+          {
+            "type": "normal",
+            "amount": 1
+          }
+        ],
+        "name": "Psychic Sphere",
+        "value": "50"
+      },
+      {
+        "costs": [
+          {
+            "type": "psychic",
+            "amount": 2
+          },
+          {
+            "type": "normal",
+            "amount": 2
+          }
+        ],
+        "name": "Psydrive",
+        "value": 150,
+        "description": "Discard 2 Psychic Energy from this Pokémon."
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 2,
+    "description": "When your Pokémon ex is Knocked Out, your opponent gets 2 points.",
+    "set": "Shining Revelry",
+    "artist": "PLANETA Mochizuki",
+    "image": "/images/promos/promo50.webp"
+  },
+  {
+    "id": 51,
+    "type": "Pokemon",
+    "name": "Cyclizar",
+    "stats": {
+      "hp": "80",
+      "type": "normal",
+      "stage": "Basic"
+    },
+    "attacks": [
+      {
+        "costs": [
+          {
+            "type": "normal",
+            "amount": 1
+          }
+        ],
+        "name": "Overacceleration",
+        "value": "20",
+        "description": "During your next turn, this Pokémon's Overacceleration attack does +20 damage."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "description": "Apparently Cyclizar has been allowing people to ride on its back since ancient times. Depictions of this have been found in 10,000-year-old murals.",
+    "set": "Shining Revelry",
+    "artist": "Shigenori Negishi",
+    "image": "/images/promos/promo51.webp"
+  },
+  {
+    "id": 52,
+    "type": "Pokemon",
+    "name": "Sprigatito",
+    "stats": {
+      "hp": "60",
+      "type": "grass",
+      "stage": "Basic"
+    },
+    "attacks": [
+      {
+        "costs": [
+          {
+            "type": "grass",
+            "amount": 1
+          }
+        ],
+        "name": "Cry for Help",
+        "description": "Put 1 random Grass Pokémon from your deck into your hand."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "description": "Its fluffy fur is similar in composition to plants. This Pokémon frequently washes its face to keep it from drying out.",
+    "set": "Shining Revelry",
+    "artist": "MINAMINAMI Take",
+    "image": "/images/promos/promo52.webp"
+  },
+  {
+    "id": 53,
+    "type": "Pokemon",
+    "name": "Floatzel",
+    "stats": {
+      "hp": "100",
+      "type": "water",
+      "stage": "Stage 1"
+    },
+    "attacks": [
+      {
+        "costs": [
+          {
+            "type": "water",
+            "amount": 1
+          }
+        ],
+        "name": "Attack the Wound",
+        "value": "10+",
+        "description": "If your opponent's Active Pokémon has damage on it, this attack does 60 more damage."
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "description": "With its flotation sac inflated, it can carry people on its back. It deflates the sac before it dives.",
+    "set": "Shining Revelry",
+    "artist": "Shin Nagasawa",
+    "image": "/images/promos/promo53.webp"
+  },
+  {
+    "id": 54,
+    "type": "Pokemon",
+    "name": "Pawmot",
+    "stats": {
+      "hp": "140",
+      "type": "lightning",
+      "stage": "Stage 2"
+    },
+    "attacks": [
+      {
+        "name": "Ability: Counterattack",
+        "description": "If this Pokémon is in the Active Spot and is damaged by an attack from your opponent's Pokémon, do 20 damage to the Attacking Pokémon."
+      },
+      {
+        "costs": [
+          {
+            "type": "lightning",
+            "amount": 2
+          }
+        ],
+        "name": "Electric Punch",
+        "value": "70"
+      }
+    ],
+    "weakness": "fighting",
+    "description": "This Pokémon normally is slow to react, but once it enters battle, it will strike down its enemies with lightning-fast movements.",
+    "set": "Shining Revelry",
+    "artist": "REND",
+    "image": "/images/promos/promo54.webp"
+  },
+  {
+    "id": 55,
+    "type": "Pokemon",
+    "name": "Machamp",
+    "stats": {
+      "hp": "150",
+      "type": "fighting",
+      "stage": "Stage 2"
+    },
+    "attacks": [
+      {
+        "costs": [
+          {
+            "type": "fighting",
+            "amount": 2
+          }
+        ],
+        "name": "Power Press",
+        "value": "70+",
+        "description": "If this Pokémon has at least 2 extra Fighting Energy attached, this attack does 50 more damage."
+      }
+    ],
+    "weakness": "psychic",
+    "retreat": 2,
+    "description": "It quickly swings its four arms to rock its opponents with ceaseless punches and chops from all angles.",
+    "set": "Shining Revelry",
+    "artist": "Masakazu Fukuda",
+    "image": "/images/promos/promo55.webp"
+  },
+  {
+    "id": 56,
+    "type": "Pokemon",
+    "name": "Ekans",
+    "stats": {
+      "hp": "60",
+      "type": "darkness",
+      "stage": "Basic"
+    },
+    "attacks": [
+      {
+        "costs": [
+          {
+            "type": "darkness",
+            "amount": 1
+          }
+        ],
+        "name": "Poison Sting",
+        "description": "Your opponent's Active Pokémon is now Poisoned."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "description": "By dislocating its jaw, it can swallow prey larger than itself. After a meal, it curls up and rests.",
+    "set": "Shining Revelry",
+    "artist": "Krgc",
+    "image": "/images/promos/promo56.webp"
+  },
+  {
+    "id": 57,
+    "type": "Pokemon",
+    "name": "Bidoof",
+    "stats": {
+      "hp": "70",
+      "type": "normal",
+      "stage": "Basic"
+    },
+    "attacks": [
+      {
+        "costs": [
+          {
+            "type": "normal",
+            "amount": 2
+          }
+        ],
+        "name": "Headbutt",
+        "value": "30"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 2,
+    "description": "With nerves of steel, nothing can perturb it. It is more agile and active than it appears.",
+    "set": "Shining Revelry",
+    "artist": "Kouki Saitou",
+    "image": "/images/promos/promo57.webp"
+  },
+  {
+    "id": 58,
+    "type": "Pokemon",
+    "name": "Pachirisu",
+    "stats": {
+      "hp": "70",
+      "type": "lightning",
+      "stage": "Basic"
+    },
+    "attacks": [
+      {
+        "costs": [
+          {
+            "type": "lightning",
+            "amount": 1
+          }
+        ],
+        "name": "Plasma",
+        "value": "10",
+        "description": "Take a Lighting Energy from your Energy Zone and attach it to 1 of your Benched Lightning Pokémon."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "description": "It's one of the kinds of Pokémon with electric cheek pouches. It shoots charges from its tail.",
+    "set": "Shining Revelry",
+    "artist": "OOYAMA",
+    "image": "/images/promos/promo58.webp"
+  },
+  {
+    "id": 59,
+    "type": "Pokemon",
+    "name": "Riolu",
+    "stats": {
+      "hp": "70",
+      "type": "fighting",
+      "stage": "Basic"
+    },
+    "attacks": [
+      {
+        "costs": [
+          {
+            "type": "fighting",
+            "amount": 2
+          }
+        ],
+        "name": "Punch",
+        "value": "40"
+      }
+    ],
+    "weakness": "psychic",
+    "retreat": 1,
+    "description": "They communicate with one another using their auras. They are able to run all through the night.",
+    "set": "Shining Revelry",
+    "artist": "Akira Komayama",
+    "image": "/images/promos/promo59.webp"
   }
 ]

@@ -40,7 +40,7 @@
 
 ## Data
 
-- [ ] Update JSON and add images for Shining Revelry
+- [x] Update JSON and add images for Shining Revelry
 
 ## Layout
 
