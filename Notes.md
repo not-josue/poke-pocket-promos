@@ -2,6 +2,10 @@
 
 These are a couple of notes taken while building the project.
 
+## Card Page
+
+Removed the "Back to Gallery" link from card pages. When clicked, the page would render the Gallery Components but in some instances the user would be scrolled to the bottom of the page.
+
 ## Dynamic Metadata
 
 React 19 came with an update to easily customize metadata for each page, so React Helmet Async was not needed.

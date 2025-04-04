@@ -3,8 +3,58 @@ import { Link } from "react-router-dom";
 // Logos
 import logo from "./logo-optimized.svg";
 import darkLogo from "./logo-dark-optimized.svg";
+import { useEffect, useState } from "react";
 
 export default function Navigation() {
+  // Toggles Aria-Expanded to show mobile nav
+  const [isExpanded, SetAria] = useState(false);
+  const ToggleAria = () => {
+    SetAria(!isExpanded);
+  };
+
+  // Dark/Light theme
+  const [prefersDark, SetTheme] = useState(() => {
+    if (localStorage.theme === "light") return false;
+    else return true;
+  });
+
+  // Handles theme button toggling and local storage
+  const ToggleTheme = () => {
+    const newTheme = !prefersDark;
+    SetTheme(newTheme);
+
+    // Use the new value, not the state variable
+    localStorage.theme = newTheme ? "dark" : "light";
+  };
+
+  // Toggles mobile menu on resize
+  // Disables scrolling when mobile menu is open
+  useEffect(() => {
+    const WindowResize = () => {
+      if (window.innerWidth >= 1024 && isExpanded) SetAria(false);
+    };
+
+    if (isExpanded) {
+      document.body.classList.add("overflow");
+    } else {
+      document.body.classList.remove("overflow");
+    }
+
+    window.addEventListener("resize", WindowResize);
+
+    return () => {
+      window.removeEventListener("resize", WindowResize);
+    };
+  }, [isExpanded]);
+
+  // Updates root classlist to dark or ""
+  useEffect(() => {
+    const html = document.documentElement;
+
+    if (prefersDark) html.classList.add("dark");
+    else html.classList.remove("dark");
+  }, [prefersDark]);
+
   return (
     <>
       <header>
@@ -12,9 +62,10 @@ export default function Navigation() {
           {/* Hamburger */}
           <button
             id="hamburger"
-            aria-expanded="false"
+            aria-expanded={isExpanded ? true : false}
             aria-haspopup="menu"
             aria-label="navigation menu"
+            onClick={ToggleAria}
           >
             <span aria-hidden="true" id="burger-top"></span>
             <span aria-hidden="true" id="burger-mid"></span>
@@ -66,6 +117,7 @@ export default function Navigation() {
               id="lg-theme-btn"
               className="theme-btn"
               aria-label="light and dark mode settings"
+              onClick={ToggleTheme}
             >
               <svg
                 aria-hidden="true"
@@ -104,7 +156,7 @@ export default function Navigation() {
             </Link>
           </div>
         </nav>
-        <nav id="mobile-nav" className="hidden">
+        <nav id="mobile-nav" className={isExpanded ? "" : "hidden"}>
           {/* Links */}
           <ul role="list">
             <li>
@@ -124,7 +176,11 @@ export default function Navigation() {
           <div>
             {/* Top */}
             <div>
-              <button id="sm-theme-btn" className="theme-btn">
+              <button
+                id="sm-theme-btn"
+                className="theme-btn"
+                onClick={ToggleTheme}
+              >
                 <svg
                   aria-hidden="true"
                   className="sun"
