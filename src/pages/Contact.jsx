@@ -4,8 +4,36 @@ import "./css/Contact.css";
 import Form from "../components/Form";
 // Data
 import { metadata } from "../data/metadata";
+// React
+import React from "react";
 
 export default function Contact() {
+  const [result, setResult] = React.useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "e95325dc-c83d-44f5-8068-3251501358c4");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      console.log("Sent");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
+
   return (
     <>
       <title>{metadata.contact.title}</title>
@@ -18,7 +46,7 @@ export default function Contact() {
           send us a message! ❤️
         </p>
 
-        <Form method="post" id="contact-form">
+        <Form onSubmit={onSubmit} id="contact-form">
           <div>
             <input
               type="hidden"
@@ -55,7 +83,7 @@ export default function Contact() {
             ></textarea>
 
             <button type="submit">Submit</button>
-            <div id="contact-form-result"></div>
+            <div id="contact-form-result">{result}</div>
           </div>
         </Form>
       </main>
