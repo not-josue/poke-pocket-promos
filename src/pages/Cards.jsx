@@ -1,18 +1,50 @@
+// Axios
+import axios from "axios";
 // CSS
 import "./css/Cards.css";
 // Components
 import GalleryCard from "../components/GalleryCard";
+import { useEffect, useState } from "react";
 // Data
-import items from "../data/items.json";
-import pokemon from "../data/pokemon.json";
-import supporters from "../data/supporters.json";
+// import items from "../data/items.json";
+// import pokemon from "../data/pokemon.json";
+// import supporters from "../data/supporters.json";
 
-// JS
-const allCards = [...items, ...pokemon, ...supporters].sort(
-  (a, b) => a.id - b.id
-);
+// // JS
+// const allCards = [...items, ...pokemon, ...supporters].sort(
+//   (a, b) => a.id - b.id
+// );
 
 export default function Cards() {
+  // Renders gallery
+  const [allCards, SetCards] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const [pokeResponse, supsResponse, itemsResponse] = await Promise.all([
+          axios.get("https://poke-pocket-promos-backend.onrender.com/pokemon"),
+          axios.get(
+            "https://poke-pocket-promos-backend.onrender.com/supporters"
+          ),
+          axios.get("https://poke-pocket-promos-backend.onrender.com/items"),
+        ]);
+
+        const data = [
+          ...pokeResponse.data,
+          ...supsResponse.data,
+          ...itemsResponse.data,
+        ];
+
+        const sort = data.sort((a, b) => a.id - b.id);
+
+        SetCards(sort);
+      } catch (e) {
+        console.error("Error fetching promo cards", e);
+      }
+    })();
+  }, []);
+
   return (
     <>
       <main className="cards-page">

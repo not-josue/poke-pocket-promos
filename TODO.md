@@ -14,13 +14,13 @@
 
 - [x] Create Navigation
 
-- [ ] Add State & Effect to Navigation
+- [x] Add State & Effect to Navigation
 
 - [x] Create Release card
 
 - [x] Create Form
 
-- [ ] Add Validation to Forms
+- [x] Add Validation to Forms
 
 - [x] Create Footer
 
@@ -30,7 +30,7 @@
 
 - [x] Create Popover Editor Wrapper
 
-- [ ] Add State & Effect to Popover Button
+- [x] Add State & Effect to Popover Button
 
 - [x] Create Mini Gallery
 
@@ -38,9 +38,13 @@
 
 - [x] Create TrainerCard
 
+- [ ]Create Skeleton Loader for Pokemon & Trainer Cards
+
 ## Data
 
 - [x] Update JSON and add images for Shining Revelry
+
+- [x] Fetch Data from Backend
 
 ## Layout
 

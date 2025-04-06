@@ -2,6 +2,8 @@
 import "./css/Popover.css";
 // Components
 import EditorWrapper from "./EditorWrapper";
+// React
+import { useState } from "react";
 
 // JS
 const emailEditor = {
@@ -32,9 +34,18 @@ const pokeEditor = {
 };
 
 export default function Popover() {
+  // Toggles Aria-Expanded to show mobile nav
+  const [isExpanded, SetAria] = useState(false);
+  const ToggleAria = () => {
+    SetAria(!isExpanded);
+  };
   return (
     <aside>
-      <button aria-expanded="false" aria-label="open account settings">
+      <button
+        onClick={ToggleAria}
+        aria-expanded={isExpanded ? true : false}
+        aria-label="open account settings"
+      >
         Account
       </button>
 
