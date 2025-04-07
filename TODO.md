@@ -46,6 +46,8 @@
 
 - [x] Fetch Data from Backend
 
+- [x] Implement sorting for Cards page
+
 ## Layout
 
 - [x] Setup Base Layout for each page

@@ -45,13 +45,52 @@ export default function Cards() {
     })();
   }, []);
 
+  const [sortedCards, SetSortedCards] = useState([]);
+
+  const formSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+
+    const formValues = {
+      type: formData.get("card-type"),
+      order: formData.get("card-order"),
+      set: formData.get("card-set").replace("-", " "),
+    };
+
+    // Special Case for Space-Time Smackdown
+    if (formValues.set === "space time")
+      formValues.set = "space-time smackdown";
+
+    let sort = [...allCards];
+
+    if (formValues.type !== "all") {
+      sort = sort.filter((el) => el.type.toLowerCase() === formValues.type);
+    }
+
+    if (formValues.order !== "ascending") {
+      sort.sort((a, b) => b.id - a.id);
+    }
+
+    if (formValues.set !== "all") {
+      sort = sort.filter((el) => el.set.toLowerCase() === formValues.set);
+    }
+
+    SetSortedCards(sort);
+  };
+
+  // Disables options to avoid "No Results Found"
+  const [selectedType, SetSelectedType] = useState("");
+  const ListenForType = (e) => {
+    SetSelectedType(e.target.value);
+  };
+
   return (
     <>
       <main className="cards-page">
         <h1>Promo Cards</h1>
 
         {/* <!-- Sort --> */}
-        <form id="promo-sorter">
+        <form id="promo-sorter" onSubmit={formSubmit}>
           <p>
             <strong>Sort By:</strong>
           </p>
@@ -59,7 +98,12 @@ export default function Cards() {
           <label className="visually-hidden" htmlFor="card-type">
             Type of Card
           </label>
-          <select name="card-type" id="card-type" required>
+          <select
+            name="card-type"
+            id="card-type"
+            required
+            onChange={ListenForType}
+          >
             <option value="">Type</option>
             <option value="all">All</option>
             <option value="pokemon">Pokémon</option>
@@ -83,10 +127,30 @@ export default function Cards() {
             <option value="">Set</option>
             <option value="all">All</option>
             <option value="genetic-apex">Genetic Apex</option>
-            <option value="mythical-island">Mythical Island</option>
-            <option value="space-time">Space-Time</option>
-            <option value="triumphant-light">Triumphant Light</option>
-            <option value="shining-revelry">Shining Revelry</option>
+            <option
+              value="mythical-island"
+              disabled={selectedType === "supporter"}
+            >
+              Mythical Island
+            </option>
+            <option
+              value="space-time"
+              disabled={selectedType === "supporter" || selectedType === "item"}
+            >
+              Space-Time
+            </option>
+            <option
+              value="triumphant-light"
+              disabled={selectedType === "supporter" || selectedType === "item"}
+            >
+              Triumphant Light
+            </option>
+            <option
+              value="shining-revelry"
+              disabled={selectedType === "supporter" || selectedType === "item"}
+            >
+              Shining Revelry
+            </option>
           </select>
 
           <button type="submit">Sort</button>
@@ -95,7 +159,7 @@ export default function Cards() {
         {/* <!-- Gallery --> */}
 
         <div id="gallery">
-          {allCards.map((el) => (
+          {(sortedCards.length > 0 ? sortedCards : allCards).map((el) => (
             <GalleryCard {...el} key={el.id} />
           ))}
         </div>
