@@ -126,6 +126,8 @@ article+a:hover {
     background-color: var(--nav-links-bg-hover);
 }
 
+/* Media Queries */
+
 @media (min-width: 768px) {
     main.promo-page {
         grid-template-columns: 1fr 1fr;

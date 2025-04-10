@@ -5,6 +5,7 @@ import "./css/Promo.css";
 // Components
 import PokemonCard from "../components/PokemonCard";
 import TrainerCard from "../components/TrainerCard";
+import PromoSkeleton from "../components/PromoSkeleton";
 
 // Data
 // import items from "../data/items.json";
@@ -55,7 +56,7 @@ export default function Promo() {
   const card = allCards.find((el) => el.id === cardId);
 
   // TODO Skeleton Loader
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <PromoSkeleton />;
 
   if (card.type === "Pokemon") return <PokemonCard {...card} />;
   else return <TrainerCard {...card} />;

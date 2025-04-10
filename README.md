@@ -8,9 +8,9 @@ A card database app for promo cards in Pokémon TCG Pocket. This is my final pro
 
 🌐 [API](https://poke-pocket-promos-backend.onrender.com/)
 
-📁 [Folder](https://github.com/not-josue/poke-pocket-promos-backend)
+📁 [Repo](https://github.com/not-josue/poke-pocket-promos-backend)
 
-Requires the Poké Pocket Promos API to be running. Uses a free deployment on [Render.com](https://render.com/) so may take up to 15 minutes to run.
+Requires the Poké Pocket Promos API to be running. Uses a free deployment on [Render.com](https://render.com/) so may take some time to render, and may only run for 15 minutes before backend goes down.
 
 ## Data
 
