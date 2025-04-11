@@ -40,7 +40,9 @@
 
 - [x] Create Skeleton Loader for Pokemon & Trainer Cards
 
-- [ ] Create Comment
+- [x] Create Skeleton Loader for Promo
+
+- [x] Create Comment
 
 ## Data
 

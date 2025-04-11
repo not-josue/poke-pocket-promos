@@ -4,6 +4,8 @@ import axios from "axios";
 import "./css/Cards.css";
 // Components
 import GalleryCard from "../components/GalleryCard";
+import GalleryCardSkeleton from "../components/GalleryCardSkeleton";
+// React
 import { useEffect, useState } from "react";
 // Data
 // import items from "../data/items.json";
@@ -18,6 +20,7 @@ import { useEffect, useState } from "react";
 export default function Cards() {
   // Renders gallery
   const [allCards, SetCards] = useState([]);
+  const [isLoading, SetIsLoading] = useState(true);
 
   useEffect(() => {
     (async () => {
@@ -39,8 +42,10 @@ export default function Cards() {
         const sort = data.sort((a, b) => a.id - b.id);
 
         SetCards(sort);
+        SetIsLoading(false);
       } catch (e) {
         console.error("Error fetching promo cards", e);
+        SetIsLoading(false);
       }
     })();
   }, []);
@@ -158,11 +163,16 @@ export default function Cards() {
         </form>
 
         {/* <!-- Gallery --> */}
-
         <div id="gallery">
-          {(sortedCards.length > 0 ? sortedCards : allCards).map((el) => (
-            <GalleryCard {...el} key={el.id} />
-          ))}
+          {isLoading
+            ? // For Skeletons
+              Array.from({ length: 59 }).map((_el, i) => (
+                <GalleryCardSkeleton key={`gallery-skeleton${i + 1}`} />
+              ))
+            : // For Images
+              (sortedCards.length > 0 ? sortedCards : allCards).map((el) => (
+                <GalleryCard {...el} key={el.id} />
+              ))}
         </div>
       </main>
     </>

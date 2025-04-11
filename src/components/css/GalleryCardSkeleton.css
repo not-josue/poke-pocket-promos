@@ -1,0 +1,9 @@
+.skeleton-gallery-card div,
+svg path.skeleton {
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+.skeleton-gallery-card div {
+    width: 200px;
+    height: 279px;
+}
