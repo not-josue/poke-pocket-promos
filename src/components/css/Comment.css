@@ -1,0 +1,6 @@
+.user-comment {
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--body-font-color);
+    padding: 1rem;
+}

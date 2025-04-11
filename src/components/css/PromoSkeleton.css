@@ -1,3 +1,8 @@
+:root {
+    --loading-light: oklch(0.96 0.0043 228.81);
+    --loading-dark: oklch(0.85 0.0176 229.03);
+}
+
 #skeleton-img,
 .skeleton-text p {
     animation: skeleton-loading 1s linear infinite alternate;
@@ -31,11 +36,11 @@
 /* Animations */
 @keyframes skeleton-loading {
     0% {
-        background-color: hsl(200, 20%, 80%);
+        background-color: var(--loading-dark);
     }
 
     100% {
-        background-color: hsl(200, 20%, 95%);
+        background-color: var(--loading-light);
     }
 }
 

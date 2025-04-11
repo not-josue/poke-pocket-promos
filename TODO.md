@@ -38,7 +38,9 @@
 
 - [x] Create TrainerCard
 
-- [ ]Create Skeleton Loader for Pokemon & Trainer Cards
+- [x] Create Skeleton Loader for Pokemon & Trainer Cards
+
+- [ ] Create Comment
 
 ## Data
 

@@ -45,6 +45,7 @@ export default function Cards() {
     })();
   }, []);
 
+  // Handles sorting after form submit
   const [sortedCards, SetSortedCards] = useState([]);
 
   const formSubmit = (e) => {

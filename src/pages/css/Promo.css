@@ -27,7 +27,6 @@ article {
     border: 1px dotted var(--body-font-color);
     border-radius: var(--form-border-radius);
     box-shadow: var(--box-shadow);
-    margin-bottom: 2rem;
 
     &>*:not(:last-child) {
         margin-bottom: 1rem;
@@ -124,6 +123,18 @@ article+a {
 
 article+a:hover {
     background-color: var(--nav-links-bg-hover);
+}
+
+/* Comments Section */
+.comment-form,
+.comment-section {
+    display: grid;
+    row-gap: 1rem;
+    margin-bottom: 2rem;
+
+    & h2 {
+        text-align: center;
+    }
 }
 
 /* Media Queries */
