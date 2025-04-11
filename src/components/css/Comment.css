@@ -6,6 +6,12 @@
     width: 250px;
 }
 
+.user-comment-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 @media (min-width: 768px) {
 
     .user-comment {
