@@ -3,4 +3,19 @@
     box-shadow: var(--box-shadow);
     border: 1px solid var(--body-font-color);
     padding: 1rem;
+    width: 250px;
+}
+
+@media (min-width: 768px) {
+
+    .user-comment {
+        width: 300px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .user-comment {
+        width: 350px;
+    }
 }

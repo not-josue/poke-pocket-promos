@@ -9,6 +9,9 @@ import PromoSkeleton from "../components/PromoSkeleton";
 import Form from "../components/Form";
 import Comment from "../components/Comment";
 
+// DOMPurify
+import DOMPurify from "dompurify";
+
 // Data
 // import items from "../data/items.json";
 // import pokemon from "../data/pokemon.json";
@@ -76,7 +79,6 @@ export default function Promo() {
   }, []);
 
   const cardId = Number(useParams().cardId);
-  const cardid = cardId;
   const card = allCards.find((el) => el.id === cardId);
 
   // Comments
@@ -86,8 +88,7 @@ export default function Promo() {
         const res = await axios.get(
           `https://poke-pocket-promos-backend.onrender.com/comments?cardid=${cardId}`
         );
-        const filter = res.data.filter((el) => el.cardid === cardId);
-        SetComments(filter);
+        SetComments(res.data);
       } catch (e) {
         console.error("Error fetching comments", e);
       }
@@ -98,13 +99,20 @@ export default function Promo() {
   const HandleSubmit = async (e) => {
     e.preventDefault();
 
+    // Clean Input
+    const cleanName = DOMPurify.sanitize(name.trim());
+    const cleanText = DOMPurify.sanitize(text.trim());
+
+    // console.log(cleanName);
+    // console.log(cleanText);
+
     try {
       await axios.post(
         "https://poke-pocket-promos-backend.onrender.com/comments",
         {
-          name,
-          text,
-          cardid,
+          name: cleanName,
+          text: cleanText,
+          cardid: cardId,
         }
       );
 
@@ -115,8 +123,7 @@ export default function Promo() {
       const res = await axios.get(
         `https://poke-pocket-promos-backend.onrender.com/comments?cardid=${cardId}`
       );
-      const filter = res.data.filter((el) => el.cardid === cardId);
-      SetComments(filter);
+      SetComments(res.data);
     } catch (e) {
       console.error("Error posting comment...", e);
     }
@@ -172,7 +179,7 @@ export default function Promo() {
         ))} */}
         {comments.length === 0 && <p>No comments yet!</p>}
         {comments.map((el, i) => (
-          <Comment key={`comment${i + 1}`} {...el} />
+          <Comment key={`comment_${cardId}_${i + 1}`} {...el} />
         ))}
       </section>
     </main>
