@@ -1,9 +1,22 @@
-.skeleton-gallery-card div,
-svg path.skeleton {
+.skeleton-gallery-card div {
     animation: skeleton-loading 1s linear infinite alternate;
 }
 
 .skeleton-gallery-card div {
     width: 200px;
     height: 279px;
+}
+
+svg path.skeleton-svg {
+    animation: svg-skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes svg-skeleton-loading {
+    0% {
+        fill: var(--loading-dark);
+    }
+
+    100% {
+        fill: var(--loading-light);
+    }
 }
