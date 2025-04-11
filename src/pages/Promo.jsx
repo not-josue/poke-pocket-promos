@@ -129,12 +129,11 @@ export default function Promo() {
     }
   };
 
-  // Skeleton Loader
-  if (isLoading) return <PromoSkeleton />;
-
   return (
     <main className="promo-page">
-      {card.type === "Pokemon" ? (
+      {isLoading ? (
+        <PromoSkeleton />
+      ) : card.type === "Pokemon" ? (
         <PokemonCard {...card} />
       ) : (
         <TrainerCard {...card} />
