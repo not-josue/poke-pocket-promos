@@ -1,12 +1,13 @@
 // CSS
 import "./css/GalleryCard.css";
 // React
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 export default function GalleryCard(props) {
   // Toggles svgs to different colors
   const [isFave, ToggleFave] = useState(false);
+  const navigate = useNavigate();
 
   const FaveToggle = () => {
     ToggleFave(!isFave);
@@ -18,16 +19,22 @@ export default function GalleryCard(props) {
     ToggleWish(!isWished);
   };
 
+  const ScrollToTop = (e) => {
+    e.preventDefault();
+    window.scrollTo(0, 0);
+    navigate(`/${props.id}`);
+  };
+
   return (
     <figure className="gallery-card">
-      <Link to={`/${props.id}`}>
+      <a href={`/${props.id}`} onClick={ScrollToTop}>
         <img
           src={process.env.PUBLIC_URL + props.image}
           alt={`promo card #${props.id} from Pokémon TCG Pocket`}
           width="200"
           height="279"
         />
-      </Link>
+      </a>
       <figcaption>
         <button
           className="fave"
