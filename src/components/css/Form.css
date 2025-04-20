@@ -1,4 +1,4 @@
-form:not(#promo-sorter) {
+form:not(#promo-sorter):not(form[method="dialog"]) {
     padding: 2rem;
     border: 1px dotted var(--body-font-color);
     border-radius: var(--form-border-radius);

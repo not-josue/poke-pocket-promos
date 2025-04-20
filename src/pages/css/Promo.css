@@ -137,6 +137,49 @@ article+a:hover {
     }
 }
 
+/* Dialogs */
+#edit-modal {
+    margin: auto;
+    padding: 2rem;
+    border: dotted 1px var(--body-font-color);
+    border-radius: var(--form-border-radius);
+    box-shadow: var(--box-shadow);
+    background-color: var(--body-bg);
+    color: var(--body-font-color);
+
+    .close-modal {
+        background-color: var(--header-bg);
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        float: right;
+    }
+
+    .close-modal:hover {
+        background-color: var(--nav-links-bg-hover);
+    }
+
+    .close-modal svg {
+        vertical-align: middle;
+        fill: var(--body-font-color);
+    }
+
+    & h2 {
+        text-align: center;
+    }
+
+    #edit-comment-form {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+    }
+}
+
+#edit-modal[open] {
+    display: grid;
+    row-gap: 1rem;
+}
+
 /* Media Queries */
 
 @media (min-width: 768px) {

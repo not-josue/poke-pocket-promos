@@ -4,12 +4,36 @@
     border: 1px solid var(--body-font-color);
     padding: 1rem;
     width: 250px;
+    display: grid;
+    row-gap: 0.8rem;
 }
 
 .user-comment-name {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.user-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & button {
+        background-color: var(--header-bg);
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+    }
+
+    & button:hover {
+        background-color: var(--nav-links-bg-hover);
+    }
+
+    & button svg {
+        vertical-align: middle;
+        fill: var(--body-font-color);
+    }
 }
 
 @media (min-width: 768px) {
