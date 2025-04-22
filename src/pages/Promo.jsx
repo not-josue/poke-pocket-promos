@@ -164,8 +164,7 @@ export default function Promo() {
 
     // Note the different structure of the PUT request from the POST request
     try {
-      await axios.put(backendPost, {
-        id: editingComment.id,
+      await axios.put(`${backendPost}/${editingComment._id}`, {
         name: cleanName,
         text: cleanText,
       });
@@ -224,7 +223,6 @@ export default function Promo() {
                 value={name}
                 onChange={(e) => SetName(e.target.value)}
               />
-              <label htmlFor="comment-password">Password</label>
               <textarea
                 name="comment-text"
                 id="comment-text"
@@ -249,7 +247,7 @@ export default function Promo() {
           {comments.map((el, i) => (
             <Comment
               editOnclick={() => ShowEditModal(el)}
-              deleteOnclick={() => HandleDelete(el.id)}
+              deleteOnclick={() => HandleDelete(el._id)}
               key={`comment_${cardId}_${i + 1}`}
               {...el}
             />
@@ -284,7 +282,6 @@ export default function Promo() {
               value={editName}
               onChange={(e) => SetEditName(e.target.value)}
             />
-            <label htmlFor="edit-password">Password</label>
             <textarea
               name="edit-text"
               id="edit-text"
